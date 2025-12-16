@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Send Alert | Doctor</title>
+<link rel="stylesheet" href="../assets/css/admin-style.css">
+</head>
+<body>
+
+<h2>Send Alert to Patient</h2>
+
+<form id="alertForm">
+    <label>Patient</label>
+    <select id="patient_id" name="patient_id" required></select>
+
+    <label>Alert Type</label>
+    <select id="alert_type" name="alert_type">
+        <option value="normal">Normal</option>
+        <option value="warning">Warning</option>
+        <option value="emergency">Emergency</option>
+    </select>
+
+    <label>Message</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send Alert</button>
+</form>
+
+
+<h3>Sent Alerts</h3>
+<div id="alertsContainer"></div>
+
+<p id="status"></p>
+
+<script src="../assets/js/doctor-alerts.js"></script>
+</body>
+</html>
