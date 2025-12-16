@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Dashboard</title>
+
+<link rel="stylesheet" href="../assets/css/admin-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <h1><i class="fas fa-user-md"></i> Doctor Dashboard</h1>
+</header>
+
+<nav>
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="patient-list.html"><i class="fas fa-users"></i> Patients</a>
+    <a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+    <a href="send-alert.html"><i class="fas fa-file-medical"></i> Alert</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</nav>
+
+<div class="dashboard">
+    <h2>Welcome, Doctor</h2>
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Total Patients</h3>
+            <p id="totalPatients">...</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Critical Alerts</h3>
+            <p id="criticalAlerts">...</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-file-medical"></i>
+            <h3>Pending Reports</h3>
+            <p id="pendingReports">...</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Health System. All Rights Reserved.</p>
+</footer>
+
+<script>
+fetch("../../api/doctor/get-dashboard-stats.php")
+  .then(res => res.json())
+  .then(data => {
+     document.getElementById("totalPatients").textContent = data.total_patients;
+     document.getElementById("criticalAlerts").textContent = data.critical_alerts;
+     document.getElementById("pendingReports").textContent = data.pending_reports;
+  })
+  .catch(err => {
+     console.error(err);
+  });
+</script>
+
+</body>
+</html>

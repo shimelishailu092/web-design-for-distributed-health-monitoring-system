@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Details</title>
+
+<link rel="stylesheet" href="../assets/css/admin-style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <h1><i class="fas fa-user"></i> Patient Details</h1>
+</header>
+
+<nav>
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="patient-list.html"><i class="fas fa-users"></i> Patients</a>
+    <a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</nav>
+
+<div class="dashboard">
+
+    <h2 id="patientName">Loading...</h2>
+    <div id="alertBox" class="alert alert-warning" style="display:none;"></div>
+
+    <table>
+        <tr><th>Age</th><td id="age"></td></tr>
+        <tr><th>Gender</th><td id="gender"></td></tr>
+        <tr><th>Condition</th><td id="condition"></td></tr>
+        <tr><th>Last Update</th><td id="lastUpdate"></td></tr>
+    </table>
+
+    <h3 style="margin-top:25px;">Health Metrics</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Heart Rate</th> 
+                <th>Oxygen Level</th> 
+                <th>BP</th> 
+            </tr>
+        </thead>
+
+        <tbody id="metricsTable">
+            <!-- JS will insert rows here -->
+        </tbody>
+    </table>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Health System. All Rights Reserved.</p>
+</footer>
+
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+fetch("../api/doctor/get-patient-details.php?id=" + id)
+    .then(res => res.json())
+    .then(data => {
+
+        document.getElementById("patientName").textContent = data.name;
+        document.getElementById("age").textContent = data.age;
+        document.getElementById("gender").textContent = data.gender;
+        document.getElementById("condition").textContent = data.condition;
+        document.getElementById("lastUpdate").textContent = data.last_update;
+
+        if(data.alert){
+            const alertBox = document.getElementById("alertBox");
+            alertBox.style.display = "block";
+            alertBox.textContent = data.alert;
+        }
+
+        let table = "";
+        data.metrics.forEach(m => {
+            table += `
+                <tr>
+                    <td>${m.time}</td>
+                    <td>${m.heart_rate}</td>
+                    <td>${m.oxygen}</td>
+                    <td>${m.bp}</td>
+                </tr>
+            `;
+        });
+        document.getElementById("metricsTable").innerHTML = table;
+
+    })
+    .catch(err => console.error(err));
+</script>
+
+</body>
+</html>
