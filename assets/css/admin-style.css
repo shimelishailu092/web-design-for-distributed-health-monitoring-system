@@ -1,0 +1,309 @@
+/* ===================== Global Styles ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===================== Header & Footer ===================== */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+header h1 {
+    font-size: 1.8rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+}
+
+/* ===================== Navigation ===================== */
+nav {
+    background: #6a11cb;
+    padding: 12px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin: 15px auto;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+/* ===================== Forms ===================== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106,17,203,0.2);
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===================== Login Container ===================== */
+.login-container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #6a11cb;
+}
+
+/* ===================== Dashboard ===================== */
+.dashboard {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.dashboard h2 {
+    margin-bottom: 30px;
+    color: #6a11cb;
+    text-align: center;
+}
+
+/* ===================== Dashboard Cards ===================== */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 250px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border-radius: 20px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* ===================== Tables ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background: #6a11cb;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background: #f4f4f4;
+}
+
+table tr:hover {
+    background: #e0d4f7;
+}
+
+/* ===================== Alerts ===================== */
+.alert {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+
+.alert-info { background: #3498db; }
+.alert-success { background: #2ecc71; }
+.alert-warning { background: #f1c40f; color:#333; }
+.alert-danger { background: #e74c3c; }
+
+/* ===================== Badges ===================== */
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge-info { background: #3498db; }
+.badge-success { background: #2ecc71; }
+.badge-warning { background: #f1c40f; color:#333; }
+.badge-danger { background: #e74c3c; }
+
+/* ===================== Responsive Design ===================== */
+@media(max-width: 992px){
+    .dashboard-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 768px){
+    .dashboard {
+        margin: 50px 15px;
+        padding: 20px;
+    }
+
+    table, th, td {
+        font-size: 0.85rem;
+    }
+
+    nav {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* adddis neger nw */
+/* LOGIN PAGE STYLE */
+.login-container {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+.login-box {
+  background:white;
+  padding:40px;
+  border-radius:15px;
+  width:100%;
+  max-width:380px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  animation:fadeIn 1s;
+}
+
+.login-box h2 {
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.login-box input {
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  outline:none;
+}
+
+.login-box input:focus {
+  border-color:#6a11cb;
+}
+
+.login-box button {
+  width:100%;
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  color:white;
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.login-box button:hover {
+  opacity:0.9;
+}
+
+.login-footer {
+  text-align:center;
+  margin-top:15px;
+}
+
+.login-footer a {
+  text-decoration:none;
+  color:#6a11cb;
+  font-size:14px;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:scale(0.9);}
+  to {opacity:1; transform:scale(1);}
+}
