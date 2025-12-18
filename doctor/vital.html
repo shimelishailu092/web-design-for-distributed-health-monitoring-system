@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/admin-style.css">
+    <title>Doctor Dashboard - All Patient Vitals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .vitals-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .vitals-table th, .vitals-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .vitals-table th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<nav>
+   <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+   <a href="patient-list.html"><i class="fas fa-users"></i> Patients</a>
+   <a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+   <a href="vital.html"><i class="fas fa-file-medical"></i>Vitals</a>
+   <a href="appointments.html"><i class="fas fa-file-medical"></i>Appointments</a>
+   <a href="send-alert.html"><i class="fas fa-file-medical"></i> Alert</a>
+   <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</nav>
+
+
+
+ <h1>All Patient Vitals</h1>
+
+
+
+        <table class="vitals-table">
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Heart Rate</th>
+                    <th>Blood Pressure(Systolic/Diastolic)</th>
+                    <th>Temperature</th>
+                    <th>Glucose</th>
+                    <th>Last Updated</th>
+                </tr>
+            </thead>
+            <tbody id="vitals-body">
+                <tr><td colspan="6">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../assets/js/doctor_vital.js"></script>
+</body>
+</html>
