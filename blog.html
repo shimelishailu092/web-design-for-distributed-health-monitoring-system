@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Distributed Health Monitoring</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f8;
+}
+
+/* HEADER SECTION */
+.blog-header{
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+                url("health.PNG") no-repeat center/cover;
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.blog-header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.blog-header p{
+    font-size:18px;
+    opacity:.95;
+}
+
+/* BLOG CONTAINER */
+.blog-container{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* BLOG CARD */
+.blog-card{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:transform .3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-6px);
+}
+
+.blog-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content h3{
+    margin-top:0;
+    color:#0d6efd;
+}
+
+.blog-content p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+.blog-meta{
+    font-size:13px;
+    color:#777;
+    margin-bottom:10px;
+}
+
+.blog-content a{
+    display:inline-block;
+    margin-top:15px;
+    text-decoration:none;
+    font-weight:600;
+    color:#0d6efd;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:#ccc;
+    text-align:center;
+    padding:20px;
+    margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">Health Monitor</div>
+    <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="api/auth/login.html">Login</a>
+        <a href="patient/register.html">Register</a>
+    </nav>
+</div>
+
+<!-- BLOG HEADER -->
+<section class="blog-header">
+    <h1>Health & Technology Blog</h1>
+    <p>Insights on remote healthcare, wearable sensors, and smart monitoring</p>
+</section>
+
+<!-- BLOG POSTS -->
+<div class="blog-container">
+    <div class="blog-grid">
+
+        <!-- BLOG 1 -->
+        <div class="blog-card">
+            <img src="health.PNG" alt="Wearable Sensors">
+            <div class="blog-content">
+                <div class="blog-meta"><i class="fas fa-calendar"></i> June 2025</div>
+                <h3>Role of Wearable Sensors in Healthcare</h3>
+                <p>
+                    Wearable sensors play a vital role in monitoring patient health
+                    by continuously collecting vital signs such as heart rate,
+                    blood pressure, and temperature.
+                </p>
+                <a href="about.html">Read More →</a>
+            </div>
+        </div>
+
+        <!-- BLOG 2 -->
+        <div class="blog-card">
+            <img src="health.PNG" alt="Distributed Systems">
+            <div class="blog-content">
+                <div class="blog-meta"><i class="fas fa-calendar"></i> June 2025</div>
+                <h3>Why Distributed Health Monitoring Matters</h3>
+                <p>
+                    Distributed health monitoring systems enable remote patient care,
+                    reduce hospital visits, and allow doctors to monitor patients
+                    in real time.
+                </p>
+                <a href="about.html">Read More →</a>
+            </div>
+        </div>
+
+        <!-- BLOG 3 -->
+        <div class="blog-card">
+            <img src="health.PNG" alt="Alerts">
+            <div class="blog-content">
+                <div class="blog-meta"><i class="fas fa-calendar"></i> June 2025</div>
+                <h3>Smart Alerts Save Lives</h3>
+                <p>
+                    Automated alert systems detect abnormal vital signs and notify
+                    healthcare professionals instantly, enabling faster response.
+                </p>
+                <a href="about.html">Read More →</a>
+            </div>
+        </div>
+
+        <!-- BLOG 4 -->
+        <div class="blog-card">
+            <img src="health.PNG" alt="Security">
+            <div class="blog-content">
+                <div class="blog-meta"><i class="fas fa-calendar"></i> June 2025</div>
+                <h3>Security in Health Monitoring Systems</h3>
+                <p>
+                    Protecting medical data is essential. Encryption and access
+                    control ensure confidentiality and integrity of patient data.
+                </p>
+                <a href="about.html">Read More →</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2025 Distributed Health Monitoring System | Health • Technology • Innovation
+</footer>
+
+</body>
+</html>
