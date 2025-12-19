@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Distributed Health Monitoring</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f4f6f8;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                url("health.PNG") no-repeat center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero .btn-group {
+    margin-top: 30px;
+}
+
+.hero a {
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 6px;
+    margin: 10px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+/* FEATURES */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgb(19, 14, 14);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 40px;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+/* HOW IT WORKS */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.step {
+    background: #201a1a;
+    padding: 25px;
+    border-left: 5px solid #0d6efd;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: #201414;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER (same as index) -->
+<div class="header">
+    <div class="logo">Health Monitor</div>
+    <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="api/auth/login.html">Login</a>
+        <a href="patient/register.html">Register</a>
+    </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Distributed Health Monitoring System</h1>
+        <p>
+            A smart healthcare platform that continuously monitors patient vitals
+            using wearable sensors and distributed technology for real-time analysis
+            and early medical intervention.
+        </p>
+
+        <div class="btn-group">
+            <a href="patient/register.html" class="btn-primary">Get Started</a>
+            <a href="about.html" class="btn-outline">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+    <h2>Key Features</h2>
+    <div class="features">
+        <div class="feature-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Live Vital Monitoring</h3>
+            <p>Continuously tracks heart rate, blood pressure, temperature and glucose.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-user-md"></i>
+            <h3>Doctor Access</h3>
+            <p>Doctors can monitor patients remotely and receive emergency alerts.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-bell"></i>
+            <h3>Smart Alerts</h3>
+            <p>Automatic alerts are generated when abnormal health conditions are detected.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Secure System</h3>
+            <p>Medical data is encrypted and protected using modern security practices.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+    <h2>How It Works</h2>
+    <div class="steps">
+        <div class="step">
+            <h3>1. Data Collection</h3>
+            <p>Wearable or simulated sensors collect patient vital signs.</p>
+        </div>
+
+        <div class="step">
+            <h3>2. Data Processing</h3>
+            <p>The system stores and analyzes data using distributed servers.</p>
+        </div>
+
+        <div class="step">
+            <h3>3. Alert Generation</h3>
+            <p>Critical conditions trigger alerts sent to doctors and patients.</p>
+        </div>
+
+        <div class="step">
+            <h3>4. Medical Response</h3>
+            <p>Doctors review reports and provide timely medical assistance.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 Distributed Health Monitoring System | Secure • Reliable • Smart Healthcare
+</footer>
+
+</body>
+</html>
