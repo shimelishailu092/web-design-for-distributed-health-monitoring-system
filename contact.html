@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Distributed Health Monitoring System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/contact.css">
+<link rel="stylesheet" href="assets/css/about.css">
+   
+</head>
+<body>
+<div class="login-footer">
+    <a href="index.html">← Back to Home</a><br>
+</div>
+<header>
+    <h1>Distributed Health Monitoring System</h1>
+    <p>Contact & Support</p>
+</header>
+
+<div class="container">
+    <div class="contact-grid">
+
+        <!-- Contact Information -->
+        <div class="card">
+            <h2>Get in Touch</h2>
+            <p>
+                If you have any questions, feedback, or technical issues regarding
+                the Distributed Health Monitoring System, feel free to contact us.
+            </p>
+
+    
+            <div class="info-item">
+                <strong>📞 Phone</strong>
+                +251 9XX XXX XXX
+            </div>
+
+            <div class="info-item">
+                <strong>📧 Email</strong>
+                support@healthmonitor.edu.et
+            </div>
+
+            <div class="info-item">
+                <strong>🕒 Support Hours</strong>
+                Monday – Friday: 8:00 AM – 5:00 PM
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="card">
+            <h2>Send Us a Message</h2>
+            <form onsubmit="submitContact(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+                <p id="status"></p>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2025 Distributed Health Monitoring System | Secure & Confidential
+</footer>
+
+<script>
+function submitContact(e) {
+    e.preventDefault();
+
+    document.getElementById("status").innerText =
+        "Thank you! Your message has been received. Our team will contact you soon.";
+}
+</script>
+
+</body>
+</html>
