@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medical Reports | Health Monitor</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+}
+
+.report-card {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-btn {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2><i class="fas fa-heartbeat"></i> Health Monitor</h2>
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="health-history.html">History</a>
+    <a href="appointments.html">Appointments</a>
+    <a class="active">Reports</a>
+    <a href="manual_vitals.html"><i class="fas fa-file-medical"></i> Vitals</a>
+    <a href="alerts.html"><i class="fas fa-user"></i> Alerts</a>
+    <a href="profile.html">Profile</a>
+    <a href="../index.html">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Doctor Reports</h1>
+  <p>Download and review reports uploaded by your doctor.</p>
+
+  <div id="reports-list">Loading reports...</div>
+</div>
+
+<script src="../assets/js/reports.js"></script>
+</body>
+</html>

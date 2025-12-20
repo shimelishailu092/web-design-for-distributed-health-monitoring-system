@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Login</title>
+    <link rel="stylesheet" href="../assets/css/admin-style.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="login-box fade-in">
+        <h2> Login</h2>
+
+        <form action="../api/auth/login.php" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="login-footer">
+            <a href="../index.html">← Back to Home</a><br>
+            <a href="register.html">Don't have an account? Register</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
