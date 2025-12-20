@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health History | Health Monitor</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/health-history.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo"><i class="fas fa-heartbeat"></i><h2>Health Monitor</h2></div>
+  <div class="nav-links">
+    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a class="active"><i class="fas fa-history"></i> History</a>
+    <a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a>
+    <a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+  <h1>Health History</h1>
+  <p>View your past vital signs and trends.</p>
+
+  <!-- Charts -->
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3>Heart Rate (bpm)</h3>
+      <canvas id="heartChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Blood Pressure (mmHg)</h3>
+      <canvas id="bpChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Temperature (°F)</h3>
+      <canvas id="tempChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>Glucose (mg/dL)</h3>
+      <canvas id="glucoseChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="history-table">
+    <h3>Recent Records</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Heart Rate</th>
+          <th>Blood Pressure</th>
+          <th>Temperature</th>
+          <th>Glucose</th>
+        </tr>
+      </thead>
+      <tbody id="history-body">
+        <!-- Filled by JS -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="../assets/js/health-history.js"></script>
+</body>
+</html>

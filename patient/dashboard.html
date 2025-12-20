@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Dashboard | Health Monitor</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/patient-dashboard.css"> <!-- your CSS file -->
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo"><i class="fas fa-heartbeat"></i><h2>Health Monitor</h2></div>
+  <div class="nav-links">
+    <a class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="health-history.html"><i class="fas fa-history"></i> History</a>
+    <a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a>
+    <a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+    <a href="manual_vitals.html"><i class="fas fa-file-medical"></i> Vitals</a>
+    <a href="alerts.html"><i class="fas fa-user"></i> Alerts</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+
+  <div class="user-profile">
+    <div class="user-avatar" id="user-avatar">JD</div>
+    <div>
+      <div id="user-name"></div>
+      <div id="user-id"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- WELCOME HEADER -->
+  <div class="welcome-header">
+    <div>
+      <h1 id="greeting">Welcome back!</h1>
+      <p>Here’s your health summary for today</p>
+    </div>
+    <div class="date-display">
+      <i class="fas fa-calendar-day"></i> <span id="current-date"></span>
+    </div>
+  </div>
+
+  <!-- GRID LAYOUT -->
+  <div class="dashboard-grid">
+
+    <!-- VITAL CARDS -->
+    <div class="card" id="heart-card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-heart"></i> Heart Rate</div>
+        <div id="hr-status" class="status-normal">Normal</div>
+      </div>
+      <div class="card-value" id="hr-value">--</div>
+      <p id="hr-last" class="last-update">Last updated: --</p>
+    </div>
+
+    <div class="card" id="bp-card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-tachometer-alt"></i> Blood Pressure</div>
+        <div id="bp-status" class="status-normal">Normal</div>
+      </div>
+      <div class="card-value" id="bp-value">-- / --</div>
+      <p id="bp-last" class="last-update">Last updated: --</p>
+    </div>
+
+    <div class="card" id="temp-card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-thermometer-half"></i> Temperature</div>
+        <div id="temp-status" class="status-normal">Normal</div>
+      </div>
+      <div class="card-value" id="temp-value">-- °F</div>
+      <p id="temp-last" class="last-update">Last updated: --</p>
+    </div>
+
+    <div class="card" id="glucose-card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-vial"></i> Glucose</div>
+        <div id="glu-status" class="status-normal">Normal</div>
+      </div>
+      <div class="card-value" id="glu-value">-- mg/dL</div>
+      <p id="glu-last" class="last-update">Last updated: --</p>
+    </div>
+
+    <!-- ALERTS -->
+    <div class="alert-card">
+      <div class="alert-header">
+        <h3><i class="fas fa-bell"></i> Alerts</h3>
+        <span id="alerts-count">0 New</span>
+      </div>
+      <div class="alert-body" id="alerts-list"></div>
+    </div>
+
+    <!-- TODAY'S MEDICATION -->
+    <div class="card medication-card">
+      <h3><i class="fas fa-pills"></i> Your Medications</h3>
+      <ul id="med-list"></ul>
+      <button id="mark-all" class="primary-btn">Mark all as taken</button>
+    </div>
+
+    <!-- APPOINTMENTS -->z
+    <div class="card appointment-card">
+      <h3><i class="fas fa-calendar-check"></i> Upcoming Appointments</h3>
+      <div id="appointment-list"></div>
+    </div>
+
+    <!-- REPORTS -->
+    <div class="card report-card">
+      <h3><i class="fas fa-file-medical"></i> Doctor Reports</h3>
+      <div id="report-list"></div>
+    </div>
+
+  </div>
+
+  <div class="footer">© Health Monitor – Secure & Encrypted</div>
+</div>
+
+<script src="../assets/js/patient-dashboard.js"></script>
+
+</body>
+</html>

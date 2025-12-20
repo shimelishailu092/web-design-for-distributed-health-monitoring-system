@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Appointments</title>
+<link rel="stylesheet" href="../assets/css/appointment.css">
+<link rel="stylesheet" href="../assets/css/health-history.css">
+</head>
+
+<body>
+    <div class="navbar">
+  <div class="logo"><i class="fas fa-heartbeat"></i><h2>Health Monitor</h2></div>
+  <div class="nav-links">
+    <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="health-history.html"><i class="fas fa-history"></i> History</a>
+    <a class="active"><i class="fas fa-calendar-check"></i> Appointments</a>
+    <a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+    <a href="manual_vitals.html"><i class="fas fa-file-medical"></i> Vitals</a>
+    <a href="alerts.html"><i class="fas fa-user"></i> Alerts</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+  </div>
+</div>
+<div class="container">
+    <h2>My Appointments</h2>
+<!-- NAVBAR -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Appointment Date</th>
+                <th>Status</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody id="appointmentsBody">
+            <tr><td colspan="4">Loading...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="../assets/js/patient_appointments.js"></script>
+</body>
+</html>
