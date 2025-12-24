@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Activity Logs</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #1e40af;
+    color: white;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.failed {
+    color: red;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+     <div class="header">
+ <h2>Admin Dashboard</h2>
+ <div class="nav-links">
+     <span id="adminName">Welcome</span>
+     
+ <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+  <a href="manage-users.html"><i class="fas fa-file-medical"></i> Manage Users</a>
+ <a href="system-logs.html"><i class="fas fa-users"></i> System-logs</a>
+ <a href="data-oversight.html"><i class="fas fa-file-medical"></i> Data Oversight</a>
+ <a href="system-status.html"><i class="fas fa-file-medical"></i>System Status</a>
+ <a href="assign-patient.html"><i class="fas fa-file-medical"></i>Assign Patients</a>
+ <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+ </div>
+ </div>
+
+<h2>System Activity Logs</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>User</th>
+            <th>Role</th>
+            <th>Action</th>
+            <th>Status</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody id="activityBody"></tbody>
+</table>
+
+<script src="../assets/js/system-activity.js"></script>
+</body>
+</html>

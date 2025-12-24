@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="../assets/css/admin-dashboard.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h2>Admin Dashboard</h2>
+    <div class="nav-links">
+        <span id="adminName">Welcome</span>
+        
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+     <a href="manage-users.html"><i class="fas fa-file-medical"></i> Manage Users</a>
+    <a href="system-logs.html"><i class="fas fa-users"></i> System-logs</a>
+    <a href="data-oversight.html"><i class="fas fa-file-medical"></i> Data Oversight</a>
+    <a href="system-status.html"><i class="fas fa-file-medical"></i>System Status</a>
+    <a href="assign-patient.html"><i class="fas fa-file-medical"></i>Assign Patients</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+    <h3>Manage System</h3>
+
+    <div class="card-grid">
+        <div class="card" onclick="location.href='manage-users.html'">
+            <i class="fas fa-users"></i>
+            <h4>Manage Users</h4>
+        </div>
+
+        <div class="card" onclick="location.href='system-logs.html'">
+            <i class="fas fa-database"></i>
+            <h4>System Logs</h4>
+        </div>
+
+        <div class="card" onclick="location.href='system-status.html'"> 
+            <i class="fas fa-shield-alt"></i>
+            <h4>System Status</h4>
+        </div>
+
+        <div class="card" onclick="location.href='data-oversight.html'">
+            <i class="fas fa-file-alt"></i>
+            <h4>Data Oversight</h4>
+        </div>
+    </div>
+</div>
+
+<script>
+fetch("../api/admin/check-admin.php")
+  .then(res => res.json())
+  .then(data => {
+    if (!data.authorized) {
+        window.location.href = "../api/auth/login.html";
+    } else {
+        document.getElementById("adminName").innerText =
+            "Welcome, " + data.user_name;
+    }
+  });
+</script>
+
+</body>
+</html>

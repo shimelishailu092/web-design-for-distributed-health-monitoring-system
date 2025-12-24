@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin | System Status</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    
+    
+</head>
+<body>
+     <div class="header">
+ <h2>Admin Dashboard</h2>
+ <div class="nav-links">
+     <span id="adminName">Welcome</span>
+     
+ <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+  <a href="manage-users.html"><i class="fas fa-file-medical"></i> Manage Users</a>
+ <a href="system-logs.html"><i class="fas fa-users"></i> System-logs</a>
+ <a href="data-oversight.html"><i class="fas fa-file-medical"></i> Data Oversight</a>
+ <a href="system-status.html"><i class="fas fa-file-medical"></i>System Status</a>
+ <a href="assign-patient.html"><i class="fas fa-file-medical"></i>Assign Patients</a>
+ <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+ </div>
+ </div>
+
+<h2>System Health & Status</h2>
+
+<ul id="statusList"></ul>
+
+<script>
+fetch("../api/admin/get-system-status.php")
+    .then(res => res.json())
+    .then(s => {
+        const ul = document.getElementById("statusList");
+
+        ul.innerHTML = `
+            <li><b>Server Status:</b> ${s.server_status}</li>
+            <li><b>Server Time:</b> ${s.server_time}</li>
+            <li><b>PHP Version:</b> ${s.php_version}</li>
+            <li><b>Server Software:</b> ${s.server_software}</li>
+            <li><b>Uptime:</b> ${s.uptime}</li>
+        `;
+    });
+</script>
+
+</body>
+</html>
