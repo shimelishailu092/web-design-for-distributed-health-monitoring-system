@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Manage Users</title>
+<link rel="stylesheet" href="../assets/css/admin.css">
+
+</head>
+<body> 
+    <div class="header">
+    <h2>Admin Dashboard</h2>
+    <div class="nav-links">
+        <span id="adminName">Welcome</span>
+        
+    <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+     <a href="manage-users.html"><i class="fas fa-file-medical"></i> Manage Users</a>
+    <a href="system-logs.html"><i class="fas fa-users"></i> System-logs</a>
+    <a href="data-oversight.html"><i class="fas fa-file-medical"></i> Data Oversight</a>
+    <a href="system-status.html"><i class="fas fa-file-medical"></i>System Status</a>
+    <a href="assign-patient.html"><i class="fas fa-file-medical"></i>Assign Patients</a>
+    <a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+</div>
+<h1>Manage Users</h1>
+
+<button onclick="window.location='add-user.html'">➕ Add User</button>
+
+
+<!-- Users Table -->
+<table id="usersTable" border="1" cellspacing="0" cellpadding="5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>DOB</th>
+            <th>Phone</th>
+            <th>Status</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr> 
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="../assets/js/admin-users.js"></script>
+</body>
+</html>
