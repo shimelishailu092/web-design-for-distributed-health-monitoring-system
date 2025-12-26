@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Vitals</title>
+    <link rel="stylesheet" href="../assets/css/admin-style.css">
+</head>
+<body>
+
+    <header>
+<h1><i class="fas fa-user-md"></i> Doctor View Vitals</h1>
+ </header>
+<nav>
+<a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+<a href="patient-list.html"><i class="fas fa-users"></i> Patients</a>
+<a href="reports.html"><i class="fas fa-file-medical"></i> Reports</a>
+<a href="patient-vitals.html"><i class="fas fa-file-medical"></i>Vitals</a>
+<a href="appointments.html"><i class="fas fa-file-medical"></i>Appointments</a>
+<a href="send-alert.html"><i class="fas fa-file-medical"></i> Alert</a>
+<a href="my-patients.html"><i class="fas fa-file-medical"></i> My Patients</a>
+<a href="../index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</nav>
+
+<h2>Patient Vital Records</h2>
+
+<table id="vitalsTable" border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Heart Rate</th>
+            <th>Blood Pressure</th>
+            <th>Temperature</th>
+            <th>Glucose</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="../assets/js/patient-vitals.js"></script>
+</body>
+</html>
